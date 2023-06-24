@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+}
+.bar-menu {
+  border: 1px solid #fff;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bars {
+  width: 3rem;
+  height: 5px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #424242;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+.bars::before,
+.bars::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 5px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #424242;
+  transition: all 0.5s ease-in-out;
+}
+
+.bars::before {
+  transform: translateY(-1rem);
+}
+.bars::after {
+  transform: translateY(1rem);
+}
+
+/*********** ANIMATION PART **************************/
+
+.bar-menu.open .bars {
+  transform: translateX(50px);
+  background: transparent;
+  box-shadow: none;
+}
+.bar-menu.open .bars::before {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+.bar-menu.open .bars::after {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}

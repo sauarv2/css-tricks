@@ -1,0 +1,53 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #fffaf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+.card {
+  /* border: 1px solid red; */
+  position: relative;
+  width: 27rem;
+  height: 20rem;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background: #eb2222;
+  border-radius: 10px;
+  transition: 0.4s linear;
+  overflow: hidden;
+}
+
+.card .content {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 5rem;
+  left: 10%;
+  text-align: center;
+  transition: 0.4s;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.card:hover .content {
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.content p,
+.content a {
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.card:hover p,
+.card:hover a {
+  transition-delay: 0.4s;
+  opacity: 1;
+}

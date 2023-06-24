@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #000;
+}
+
+a {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  color: #ffe77aff;
+  width: 20rem;
+  height: 4rem;
+  letter-spacing: 3px;
+  line-height: 4rem;
+  text-align: center;
+  /* border: 1px solid #f6b93b; */
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  /* background: #15a73c; */
+}
+a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 0.25rem;
+  background: #ffe77aff;
+  transition: all 0.4s;
+}
+a:hover:before {
+  left: 0%;
+}
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 0.25rem;
+  background: #ffe77aff;
+  transition: all 0.4s;
+}
+a:hover::after {
+  right: 0%;
+}
+
+span::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 0.25rem;
+  height: 100%;
+  background: #ffe77aff;
+  transition: all 0.4s;
+}
+a:hover span::before {
+  top: 0;
+}
+span::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  width: 0.25rem;
+  height: 100%;
+  background: #ffe77aff;
+  transition: all 0.4s;
+}
+
+a:hover span::after {
+  bottom: 0;
+}
