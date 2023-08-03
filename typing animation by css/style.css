@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.typeing-effect p {
+  border-right: 5px solid #b9cf0d;
+  animation: blink 0.5s step-end infinite, wi6d steps(20, end) 3.5s infinite;
+  font-size: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 20rem; /* width: max-content; */
+}
+
+@keyframes wi6d {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  30% {
+    border-color: #b9cf0d;
+  }
+}
