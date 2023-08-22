@@ -38,10 +38,7 @@ style a the 5 boxes
   opacity: 1;
   transition: all 0.3s;
 }
-/* 
-*now come the Important part box which one i hover only glow this one rest of the opacity 0.4 using ***** > :not(:hover) **** this css property
-one thing it works on container of parent box not children boxes thats why i use *** .boxes:hover *** not .box
-*/
+
 .boxes:hover > :not(:hover) {
   opacity: 0.4;
 }

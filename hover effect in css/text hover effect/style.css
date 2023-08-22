@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #def6ef;
+}
+
+p {
+  font-size: 2rem;
+  background: right / 0% 100% no-repeat linear-gradient(#f3a2a2, #7fc1df);
+  transition: background-size 600ms;
+  color: #1b1b1b;
+}
+
+p:hover {
+  background: left / 100% 100% no-repeat linear-gradient(#f3a2a2, #7fc1df);
+  color: #fff;
+}
