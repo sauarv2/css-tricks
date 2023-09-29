@@ -1,23 +1,27 @@
+/* Apply border-box sizing to all elements */
 * {
   box-sizing: border-box;
 }
 
+/* Styles for the body */
 body {
-  background-color: #000000;
+  background-color: #000000; /* Background color */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  height: 100vh; /* Viewport height */
+  overflow: hidden; /* Hide overflow */
+  margin: 0; /* Remove margin */
 }
 
+/* Styles for the kinetic shape */
 .kinetic {
   position: relative;
   height: 80px;
   width: 80px;
 }
 
+/* Pseudo-elements to create the kinetic effect */
 .kinetic::after,
 .kinetic::before {
   content: "";
@@ -26,16 +30,18 @@ body {
   left: 0;
   width: 0;
   height: 0;
-  border: 5rem solid transparent;
-  border-bottom-color: #f82929;
-  animation: rotateA 2s linear infinite 0.5s;
+  border: 5rem solid transparent; /* Border for creating a triangle */
+  border-bottom-color: #f82929; /* Color for the bottom border */
+  animation: rotateA 2s linear infinite 0.5s; /* Animation for rotation */
 }
 
+/* Adjust rotation for the pseudo-element ::before */
 .kinetic::before {
   transform: rotate(90deg);
-  animation: rotateB 2s linear infinite;
+  animation: rotateB 2s linear infinite; /* Animation for rotation */
 }
 
+/* Keyframes for rotating the pseudo-element ::after */
 @keyframes rotateA {
   0%,
   25% {
@@ -52,6 +58,7 @@ body {
   }
 }
 
+/* Keyframes for rotating the pseudo-element ::before */
 @keyframes rotateB {
   0%,
   25% {
